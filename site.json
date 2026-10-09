@@ -1,0 +1,18 @@
+{
+  "title": "Yugo Handbook",
+  "description": "Bring tracking, animation, expressions, and physics together in Blender.",
+  "version": "0.10.0",
+  "repository": "https://github.com/HIIIOCG/Yugo-Docs",
+  "sourceRepository": "https://github.com/HIIIOCG/Yugo-BlenderVtubing-Dev",
+  "pages": [
+    {"id":"index","title":"Introduction to Yugo","section":"Welcome","file":"content/introduction.md"},
+    {"id":"tutorials/index","title":"Tutorials","section":"Tutorials","file":"content/tutorials/index.md","status":"wip"},
+    {"id":"tutorials/getting-started","title":"Getting Started","section":"Tutorials","file":"content/tutorials/getting-started.md","status":"wip"},
+    {"id":"tutorials/first-node-graph","title":"Your First Node Graph","section":"Tutorials","file":"content/tutorials/first-node-graph.md","status":"wip"},
+    {"id":"yugo-layer","title":"Yugo Layer","section":"User Guide","file":"content/yugo-layer.md","status":"wip"},
+    {"id":"optimizing-vrm-character-performance","title":"Optimizing VRM Character Performance","shortTitle":"VRM Character Performance","section":"User Guide","file":"content/performance.md"},
+    {"id":"composing-presets","title":"Composing Presets","section":"User Guide","file":"content/composing-presets.md"},
+    {"id":"camera","title":"Camera","section":"User Guide","file":"content/camera.md","status":"wip"},
+    {"id":"nodes/index","title":"Node Reference","section":"Node Reference","file":"content/nodes/index.md"}
+  ]
+}

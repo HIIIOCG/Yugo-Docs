@@ -1,0 +1,2555 @@
+[
+  {
+    "id": "YUGUS_NODE_float_value",
+    "title": "Float",
+    "category": "Data",
+    "description": "A numeric constant or animated value without a 0–1 limit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "value",
+        "name": "Value",
+        "description": "",
+        "default": 0,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_vector_value",
+    "title": "Vector",
+    "category": "Data",
+    "description": "A three-component vector constant or animated value",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Vector",
+        "type": "Vector",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "value",
+        "name": "Vector",
+        "description": "",
+        "default": [
+          0,
+          0,
+          0
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_string_value",
+    "title": "String",
+    "category": "Data",
+    "description": "Enter text and output it through a text socket",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Text",
+        "type": "Text",
+        "default": ""
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "value",
+        "name": "Text",
+        "description": "",
+        "default": "",
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_vrm_data",
+    "title": "VRM Data",
+    "category": "Data",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Armature",
+        "type": "Armatures",
+        "default": null
+      },
+      {
+        "name": "Reload",
+        "type": "Trigger",
+        "default": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Armatures",
+        "type": "Armatures",
+        "default": null
+      },
+      {
+        "name": "Objects",
+        "type": "Objects List",
+        "default": null
+      },
+      {
+        "name": "Bone Map",
+        "type": "Humanoid Bone Map",
+        "default": null
+      },
+      {
+        "name": "Expression Map",
+        "type": "Expression Map",
+        "default": null
+      },
+      {
+        "name": "Spring Data",
+        "type": "Spring Data",
+        "default": null
+      },
+      {
+        "name": "Meta",
+        "type": "VRM Meta",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "armature",
+        "name": "Character",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_armature_value",
+    "title": "Armature",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Armatures",
+        "type": "Armatures",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "armature",
+        "name": "Armature",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_objects_value",
+    "title": "Objects List",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Objects",
+        "type": "Objects List",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_bone_map_value",
+    "title": "Bone Map Value",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Bone Map",
+        "type": "Humanoid Bone Map",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "armature",
+        "name": "Armature",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_map_value",
+    "title": "Expression Map Value",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Expression Map",
+        "type": "Expression Map",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_meta_value",
+    "title": "Meta Value",
+    "category": "Data",
+    "description": "Manually enter a name, author and other character metadata",
+    "inputs": [
+      {
+        "name": "Name",
+        "type": "Text",
+        "default": ""
+      },
+      {
+        "name": "Author",
+        "type": "Text",
+        "default": ""
+      },
+      {
+        "name": "Version",
+        "type": "Text",
+        "default": ""
+      },
+      {
+        "name": "Copyright",
+        "type": "Text",
+        "default": ""
+      },
+      {
+        "name": "Contact",
+        "type": "Text",
+        "default": ""
+      },
+      {
+        "name": "Reference",
+        "type": "Text",
+        "default": ""
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Meta",
+        "type": "VRM Meta",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "meta_name",
+        "name": "Name",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "author",
+        "name": "Author",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "version",
+        "name": "Version",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "copyright",
+        "name": "Copyright",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "contact",
+        "name": "Contact",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "reference",
+        "name": "Reference",
+        "description": "",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "show_details",
+        "name": "Details",
+        "description": "",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_mixer",
+    "title": "Mixer",
+    "category": "Data",
+    "description": "Blend typed values or merge maps and physics descriptions",
+    "inputs": [
+      {
+        "name": "Factor",
+        "type": "Float",
+        "default": 0.5
+      },
+      {
+        "name": "Float A",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Float B",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Float Result",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "data_type",
+        "name": "Type",
+        "description": "",
+        "default": "FLOAT",
+        "choices": [
+          {
+            "name": "Float",
+            "value": "FLOAT",
+            "description": ""
+          },
+          {
+            "name": "Vector",
+            "value": "VECTOR",
+            "description": ""
+          },
+          {
+            "name": "Humanoid Motion",
+            "value": "HUMANOID_MOTION",
+            "description": ""
+          },
+          {
+            "name": "Bone Transforms",
+            "value": "BONE_TRANSFORMS",
+            "description": ""
+          },
+          {
+            "name": "Expressions",
+            "value": "EXPRESSIONS",
+            "description": ""
+          },
+          {
+            "name": "Bone Map",
+            "value": "BONE_MAP",
+            "description": ""
+          },
+          {
+            "name": "Expression Map",
+            "value": "EXPRESSION_MAP",
+            "description": ""
+          },
+          {
+            "name": "Physics Description",
+            "value": "PHYSICS_DESCRIPTION",
+            "description": ""
+          },
+          {
+            "name": "Object Transforms",
+            "value": "OBJECT_TRANSFORMS",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "key": "clamp_factor",
+        "name": "Clamp Factor",
+        "description": "",
+        "default": true,
+        "choices": []
+      },
+      {
+        "key": "expression_mode",
+        "name": "Mode",
+        "description": "",
+        "default": "REPLACE",
+        "choices": [
+          {
+            "name": "Replace",
+            "value": "REPLACE",
+            "description": "Blend B over A"
+          },
+          {
+            "name": "Add",
+            "value": "ADD",
+            "description": "Add weighted B values"
+          },
+          {
+            "name": "Maximum",
+            "value": "MAX",
+            "description": "Keep the stronger weighted value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_data_viewer",
+    "title": "Data Viewer",
+    "category": "Data",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Bone Map",
+        "type": "Humanoid Bone Map",
+        "default": null
+      },
+      {
+        "name": "Expression Map",
+        "type": "Expression Map",
+        "default": null
+      },
+      {
+        "name": "Spring Data",
+        "type": "Spring Data",
+        "default": null
+      },
+      {
+        "name": "Meta",
+        "type": "VRM Meta",
+        "default": null
+      },
+      {
+        "name": "Simulation Data",
+        "type": "Simulation Data",
+        "default": null
+      }
+    ],
+    "outputs": [],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_object_value",
+    "title": "Object",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Object",
+        "type": "Object",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "object",
+        "name": "Object",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_collection_value",
+    "title": "Collection",
+    "category": "Data",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Collection",
+        "type": "Collection",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "collection",
+        "name": "Collection",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_image_value",
+    "title": "Image",
+    "category": "Data",
+    "description": "Select or open a Blender image and output it as Image data",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Image",
+        "type": "Image",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "image",
+        "name": "Image",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_image_from_url",
+    "title": "Image From URL",
+    "category": "Data",
+    "description": "Sample an image URL; connected consumers request its download",
+    "inputs": [
+      {
+        "name": "URL",
+        "type": "Text",
+        "default": ""
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Image",
+        "type": "Image",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_vmc_source",
+    "title": "VMC Receiver",
+    "category": "Sources",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Humanoid Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "address",
+        "name": "Address",
+        "description": "",
+        "default": "127.0.0.1",
+        "choices": []
+      },
+      {
+        "key": "port",
+        "name": "Port",
+        "description": "",
+        "default": 39539,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_ifacial_source",
+    "title": "iFacialMocap",
+    "category": "Sources",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Calibrate",
+        "type": "Trigger",
+        "default": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Humanoid Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "address",
+        "name": "iPhone Address",
+        "description": "",
+        "default": "127.0.0.1",
+        "choices": []
+      },
+      {
+        "key": "device_port",
+        "name": "Device Port",
+        "description": "",
+        "default": 49983,
+        "choices": []
+      },
+      {
+        "key": "mirror",
+        "name": "Mirror",
+        "description": "Mirror head yaw and roll",
+        "default": true,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_action_source",
+    "title": "Blender Action",
+    "category": "Sources",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Source Bone Map",
+        "type": "Humanoid Bone Map",
+        "default": null
+      },
+      {
+        "name": "Trigger",
+        "type": "Trigger",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Humanoid Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "action",
+        "name": "Action",
+        "description": "",
+        "default": null,
+        "choices": []
+      },
+      {
+        "key": "speed",
+        "name": "Speed",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "frame_offset",
+        "name": "Frame Offset",
+        "description": "",
+        "default": 0,
+        "choices": []
+      },
+      {
+        "key": "cyclic",
+        "name": "Cyclic",
+        "description": "",
+        "default": true,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_head_profile",
+    "title": "Head Rotation Profile",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "preset",
+        "name": "Preset",
+        "description": "Head and body rotation multipliers from Yugo",
+        "default": "NORMAL",
+        "choices": [
+          {
+            "name": "Normal",
+            "value": "NORMAL",
+            "description": "Yugo non-inverted rotation profile"
+          },
+          {
+            "name": "Live2D",
+            "value": "LIVE2D",
+            "description": "Yugo inverted rotation profile with body counter-rotation"
+          },
+          {
+            "name": "Custom",
+            "value": "CUSTOM",
+            "description": "Keep manually adjusted rotation multipliers"
+          }
+        ]
+      },
+      {
+        "key": "head",
+        "name": "Head",
+        "description": "",
+        "default": [
+          0.800000011920929,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "choices": []
+      },
+      {
+        "key": "neck",
+        "name": "Neck",
+        "description": "",
+        "default": [
+          0.5,
+          0.5,
+          0.30000001192092896
+        ],
+        "choices": []
+      },
+      {
+        "key": "chest",
+        "name": "Chest",
+        "description": "",
+        "default": [
+          0.6000000238418579,
+          0.6000000238418579,
+          0.5
+        ],
+        "choices": []
+      },
+      {
+        "key": "spine",
+        "name": "Spine",
+        "description": "",
+        "default": [
+          0.30000001192092896,
+          0.30000001192092896,
+          0.20000000298023224
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_humanoid_mask",
+    "title": "Humanoid Mask",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Mask",
+        "type": "Humanoid Mask",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "root",
+        "name": "Root",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "hips",
+        "name": "Hips",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "spine",
+        "name": "Spine",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "chest",
+        "name": "Chest",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "neck",
+        "name": "Neck",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "head",
+        "name": "Head",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "left_leg",
+        "name": "Left Leg",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "right_leg",
+        "name": "Right Leg",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "left_shoulder",
+        "name": "Left Shoulder",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "right_shoulder",
+        "name": "Right Shoulder",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "left_arm",
+        "name": "Left Arm",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "right_arm",
+        "name": "Right Arm",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "left_hand",
+        "name": "Left Hand",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "right_hand",
+        "name": "Right Hand",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "left_finger",
+        "name": "Left Finger",
+        "description": "",
+        "default": 1,
+        "choices": []
+      },
+      {
+        "key": "right_finger",
+        "name": "Right Finger",
+        "description": "",
+        "default": 1,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_motion_smooth",
+    "title": "Motion Smooth",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Mask",
+        "type": "Humanoid Mask",
+        "default": null
+      },
+      {
+        "name": "Smooth",
+        "type": "Float",
+        "default": 0.15000000596046448
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "smooth",
+        "name": "Smooth",
+        "description": "",
+        "default": 0.15000000596046448,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_motion_delay",
+    "title": "Motion Delay",
+    "category": "Humanoid Motion",
+    "description": "Delay Humanoid Motion by a number of seconds",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Delay Seconds",
+        "type": "Float",
+        "default": 0.20000000298023224
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "delay_seconds",
+        "name": "Delay Seconds",
+        "description": "",
+        "default": 0.20000000298023224,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_mirror_motion",
+    "title": "Mirror Motion",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_motion_weight",
+    "title": "Motion Weight",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Mask",
+        "type": "Humanoid Mask",
+        "default": null
+      },
+      {
+        "name": "Weight",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "weight",
+        "name": "Weight",
+        "description": "",
+        "default": 1,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_motion_to_rotation",
+    "title": "Motion to Bone Transform",
+    "category": "Humanoid Motion",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Motion",
+        "type": "VRM Humanoid Motion",
+        "default": null
+      },
+      {
+        "name": "Bone Map",
+        "type": "Humanoid Bone Map",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Bone Transform",
+        "type": "Bone Transform",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "motion_type",
+        "name": "Motion Type",
+        "description": "",
+        "default": "VRM_HUMANOID",
+        "choices": [
+          {
+            "name": "VRM Humanoid",
+            "value": "VRM_HUMANOID",
+            "description": "Canonical humanoid motion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_action",
+    "title": "Expression Action",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Trigger",
+        "type": "Trigger",
+        "default": 0
+      },
+      {
+        "name": "Expression Map",
+        "type": "Expression Map",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "expression_key",
+        "name": "Expression",
+        "description": "",
+        "default": "__NONE__",
+        "choices": []
+      },
+      {
+        "key": "strength",
+        "name": "Strength",
+        "description": "",
+        "default": 1,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_mask",
+    "title": "Expression Mask",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "names",
+        "name": "Names",
+        "description": "Comma-separated expression names",
+        "default": "blinkLeft, blinkRight",
+        "choices": []
+      },
+      {
+        "key": "weight",
+        "name": "Weight",
+        "description": "",
+        "default": 0,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_smooth",
+    "title": "Expression Smooth",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      },
+      {
+        "name": "Smooth",
+        "type": "Float",
+        "default": 0.15000000596046448
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "names",
+        "name": "Names",
+        "description": "Blank means all expressions",
+        "default": "",
+        "choices": []
+      },
+      {
+        "key": "smooth",
+        "name": "Smooth",
+        "description": "",
+        "default": 0.15000000596046448,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_lock",
+    "title": "Expression Lock",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "lock_eyes",
+        "name": "Lock Eyes",
+        "description": "",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "lock_mouth",
+        "name": "Lock Mouth",
+        "description": "",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_weight",
+    "title": "Expression Weight",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      },
+      {
+        "name": "Weight",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "weight",
+        "name": "Weight",
+        "description": "",
+        "default": 1,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_expression_to_shapes",
+    "title": "Expressions to ShapeKeysValues",
+    "category": "Expressions",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Expressions",
+        "type": "Expression Channels",
+        "default": null
+      },
+      {
+        "name": "Expression Map",
+        "type": "Expression Map",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Shape Keys Values",
+        "type": "Shape Keys Values",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_apply_object_transform",
+    "title": "Apply Transform",
+    "category": "Output",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Object Transforms",
+        "type": "Object Transforms",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "enabled",
+        "name": "Apply",
+        "description": "",
+        "default": true,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_apply_rotation",
+    "title": "Bone Transforms to Armature",
+    "category": "Output",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Bone Transform",
+        "type": "Bone Transform",
+        "default": null
+      },
+      {
+        "name": "Armatures",
+        "type": "Armatures",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "enabled",
+        "name": "Enabled",
+        "description": "",
+        "default": true,
+        "choices": []
+      },
+      {
+        "key": "armature",
+        "name": "Armature",
+        "description": "",
+        "default": null,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_apply_shapes",
+    "title": "ShapeKeysValues to Objects List",
+    "category": "Output",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Shape Keys Values",
+        "type": "Shape Keys Values",
+        "default": null
+      },
+      {
+        "name": "Objects",
+        "type": "Objects List",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "enabled",
+        "name": "Enabled",
+        "description": "",
+        "default": true,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_hz_trigger",
+    "title": "Hz Trigger",
+    "category": "Flow Control",
+    "description": "",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "Trigger",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "hz",
+        "name": "Rate",
+        "description": "",
+        "default": "60",
+        "choices": [
+          {
+            "name": "8 Hz",
+            "value": "8",
+            "description": ""
+          },
+          {
+            "name": "12 Hz",
+            "value": "12",
+            "description": ""
+          },
+          {
+            "name": "24 Hz",
+            "value": "24",
+            "description": ""
+          },
+          {
+            "name": "30 Hz",
+            "value": "30",
+            "description": ""
+          },
+          {
+            "name": "60 Hz",
+            "value": "60",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_if",
+    "title": "If",
+    "category": "Flow Control",
+    "description": "Send Enter to True when Condition is above zero, otherwise False",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Condition",
+        "type": "Trigger",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "True",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "False",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_gate",
+    "title": "Gate",
+    "category": "Flow Control",
+    "description": "Pass Enter to End while Open is above zero",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Open",
+        "type": "Trigger",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_delay",
+    "title": "Delay",
+    "category": "Flow Control",
+    "description": "Wait before End; ignore further Enter while waiting; Reset cancels the wait",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Reset",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "seconds",
+        "name": "Seconds",
+        "description": "",
+        "default": 0.5,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_wait_until",
+    "title": "Wait Until",
+    "category": "Flow Control",
+    "description": "After Enter, wait for Condition to become true; Reset cancels the wait",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Condition",
+        "type": "Trigger",
+        "default": 1
+      },
+      {
+        "name": "Reset",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_once",
+    "title": "Once",
+    "category": "Flow Control",
+    "description": "Pass the first Enter to End; Reset allows it to run again",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Reset",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_sequence",
+    "title": "Flow Sequence",
+    "category": "Flow Control",
+    "description": "Run Then 1, Then 2, and Then 3 in order for each Enter",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Then 1",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Then 2",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Then 3",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_every_n",
+    "title": "Every N",
+    "category": "Flow Control",
+    "description": "Pass every Nth Enter to End; Reset restarts the count",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Reset",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "every",
+        "name": "Every N",
+        "description": "",
+        "default": 2,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_flow_repeat",
+    "title": "Repeat",
+    "category": "Flow Control",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Enter",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Cancel",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "End",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Cancelled",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Failed",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Running",
+        "type": "Trigger",
+        "default": 0
+      },
+      {
+        "name": "Body",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "busy_policy",
+        "name": "When Busy",
+        "description": "",
+        "default": "PARALLEL",
+        "choices": [
+          {
+            "name": "Parallel",
+            "value": "PARALLEL",
+            "description": "Keep every incoming invocation independent"
+          },
+          {
+            "name": "Ignore",
+            "value": "IGNORE",
+            "description": "Ignore Enter while this action is running"
+          },
+          {
+            "name": "Restart",
+            "value": "RESTART",
+            "description": "Cancel the previous invocation before starting"
+          }
+        ]
+      },
+      {
+        "key": "count",
+        "name": "Count",
+        "description": "",
+        "default": 2,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_math",
+    "title": "Math",
+    "category": "Float Math",
+    "description": "Common float arithmetic, minimum, maximum and absolute value",
+    "inputs": [
+      {
+        "name": "A",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "B",
+        "type": "Float",
+        "default": 1
+      },
+      {
+        "name": "C",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "operation",
+        "name": "Operation",
+        "description": "",
+        "default": "ADD",
+        "choices": [
+          {
+            "name": "Add",
+            "value": "ADD",
+            "description": "A + B"
+          },
+          {
+            "name": "Subtract",
+            "value": "SUBTRACT",
+            "description": "A - B"
+          },
+          {
+            "name": "Multiply",
+            "value": "MULTIPLY",
+            "description": "A * B"
+          },
+          {
+            "name": "Divide",
+            "value": "DIVIDE",
+            "description": "A / B; zero divisor returns zero"
+          },
+          {
+            "name": "Multiply Add",
+            "value": "MULTIPLY_ADD",
+            "description": "A * B + C"
+          },
+          {
+            "name": "Minimum",
+            "value": "MINIMUM",
+            "description": "Smaller of A and B"
+          },
+          {
+            "name": "Maximum",
+            "value": "MAXIMUM",
+            "description": "Larger of A and B"
+          },
+          {
+            "name": "Absolute",
+            "value": "ABSOLUTE",
+            "description": "Absolute value of A"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_clamp",
+    "title": "Clamp",
+    "category": "Float Math",
+    "description": "Limit a numeric value between Min and Max",
+    "inputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Min",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Max",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_map_range",
+    "title": "Map Range",
+    "category": "Float Math",
+    "description": "Map a value from an input range to an output range",
+    "inputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "From Min",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "From Max",
+        "type": "Float",
+        "default": 1
+      },
+      {
+        "name": "To Min",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "To Max",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "clamp_result",
+        "name": "Clamp",
+        "description": "Clamp the mapped factor to 0–1",
+        "default": true,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_combine_xyz",
+    "title": "Combine XYZ",
+    "category": "Vector Math",
+    "description": "Combine three numeric values into a vector",
+    "inputs": [
+      {
+        "name": "X",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Y",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Z",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Vector",
+        "type": "Vector",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_separate_xyz",
+    "title": "Separate XYZ",
+    "category": "Vector Math",
+    "description": "Separate a vector into three numeric values",
+    "inputs": [
+      {
+        "name": "Vector",
+        "type": "Vector",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "X",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Y",
+        "type": "Float",
+        "default": 0
+      },
+      {
+        "name": "Z",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_vector_math",
+    "title": "Vector Math",
+    "category": "Vector Math",
+    "description": "Common vector arithmetic and directional measurements",
+    "inputs": [
+      {
+        "name": "Vector A",
+        "type": "Vector",
+        "default": null
+      },
+      {
+        "name": "Vector B",
+        "type": "Vector",
+        "default": null
+      },
+      {
+        "name": "Scale",
+        "type": "Float",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Vector",
+        "type": "Vector",
+        "default": null
+      },
+      {
+        "name": "Value",
+        "type": "Float",
+        "default": 0
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "operation",
+        "name": "Operation",
+        "description": "",
+        "default": "ADD",
+        "choices": [
+          {
+            "name": "Add",
+            "value": "ADD",
+            "description": "Vector A + Vector B"
+          },
+          {
+            "name": "Subtract",
+            "value": "SUBTRACT",
+            "description": "Vector A - Vector B"
+          },
+          {
+            "name": "Scale",
+            "value": "SCALE",
+            "description": "Multiply Vector A by Scale"
+          },
+          {
+            "name": "Dot Product",
+            "value": "DOT_PRODUCT",
+            "description": "Scalar dot product"
+          },
+          {
+            "name": "Cross Product",
+            "value": "CROSS_PRODUCT",
+            "description": "Vector cross product"
+          },
+          {
+            "name": "Length",
+            "value": "LENGTH",
+            "description": "Length of Vector A"
+          },
+          {
+            "name": "Distance",
+            "value": "DISTANCE",
+            "description": "Distance between the vectors"
+          },
+          {
+            "name": "Normalize",
+            "value": "NORMALIZE",
+            "description": "Unit vector; a zero vector returns zero"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_spring_to_physics",
+    "title": "Spring to YugoPhysics",
+    "category": "Physics",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Spring Data",
+        "type": "Spring Data",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Physics Description",
+        "type": "Physics Description",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_rigid_to_physics",
+    "title": "Rigid Body to YugoPhysics",
+    "category": "Physics",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Objects",
+        "type": "Objects List",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Physics Description",
+        "type": "Physics Description",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "YUGUS_NODE_physics_solver",
+    "title": "YugoPhysics Solver",
+    "category": "Physics",
+    "description": "",
+    "inputs": [
+      {
+        "name": "Physics Description",
+        "type": "Physics Description",
+        "default": null
+      },
+      {
+        "name": "Play",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Stop",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Reset",
+        "type": "Update Event",
+        "default": null
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Object Transforms",
+        "type": "Object Transforms",
+        "default": null
+      },
+      {
+        "name": "Bone Transforms",
+        "type": "Bone Transform",
+        "default": null
+      },
+      {
+        "name": "Updated",
+        "type": "Update Event",
+        "default": null
+      },
+      {
+        "name": "Simulation Data",
+        "type": "Simulation Data",
+        "default": null
+      }
+    ],
+    "parameters": [
+      {
+        "key": "monitor_open",
+        "name": "Monitor",
+        "description": "Show the latest data evaluated by this source",
+        "default": false,
+        "choices": []
+      },
+      {
+        "key": "enabled",
+        "name": "Enabled",
+        "description": "",
+        "default": true,
+        "choices": []
+      },
+      {
+        "key": "physics_hz",
+        "name": "Physics Hz",
+        "description": "",
+        "default": 240,
+        "choices": []
+      },
+      {
+        "key": "trace_duration",
+        "name": "Recording Duration",
+        "description": "",
+        "default": 10,
+        "choices": []
+      },
+      {
+        "key": "trace_sample_hz",
+        "name": "Record Hz",
+        "description": "",
+        "default": 60,
+        "choices": []
+      }
+    ]
+  }
+]

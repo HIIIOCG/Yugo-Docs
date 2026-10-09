@@ -1,0 +1,13 @@
+{
+  "name": "yugo-handbook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The English handbook for Yugo Blender VTube.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

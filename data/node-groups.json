@@ -1,0 +1,78 @@
+[
+  {
+    "id": "nodes/inputs",
+    "title": "Inputs",
+    "description": "Bring tracking, animation, and character data into a node graph. These nodes follow the Inputs frame in the screenshot; Custom Inputs are documented separately.",
+    "summary": "Receive tracking, sample animation, and read character data.",
+    "image": "../assets/images/nodes-inputs.png",
+    "imageAlt": "Yugo nodes arranged in Inputs and Custom Inputs frames in Blender",
+    "nodeIds": ["YUGUS_NODE_vmc_source", "YUGUS_NODE_ifacial_source", "YUGUS_NODE_action_source", "YUGUS_NODE_vrm_data", "YUGUS_NODE_data_viewer"]
+  },
+  {
+    "id": "nodes/custom-inputs",
+    "title": "Custom Inputs",
+    "description": "Provide your own values, Blender references, character maps, and metadata. Use these nodes when a graph needs a specific value or a manually selected source.",
+    "summary": "Supply values, object references, images, and custom maps.",
+    "image": "../assets/images/nodes-inputs.png",
+    "imageAlt": "Yugo Inputs and Custom Inputs frames, with value and mapping nodes on the right",
+    "nodeIds": ["YUGUS_NODE_float_value", "YUGUS_NODE_vector_value", "YUGUS_NODE_string_value", "YUGUS_NODE_armature_value", "YUGUS_NODE_object_value", "YUGUS_NODE_objects_value", "YUGUS_NODE_collection_value", "YUGUS_NODE_image_value", "YUGUS_NODE_image_from_url", "YUGUS_NODE_bone_map_value", "YUGUS_NODE_expression_map_value", "YUGUS_NODE_meta_value"]
+  },
+  {
+    "id": "nodes/math-mixer",
+    "title": "Math / Mixer",
+    "description": "Calculate numeric and vector values, remap ranges, and combine compatible data. Math and Mixer share this page to keep the reference compact.",
+    "summary": "Calculate, remap, clamp, and combine data.",
+    "image": "../assets/images/nodes-math-flow.png",
+    "imageAlt": "Yugo Math, Mixer, and FlowControl frames in Blender",
+    "nodeIds": ["YUGUS_NODE_math", "YUGUS_NODE_clamp", "YUGUS_NODE_map_range", "YUGUS_NODE_combine_xyz", "YUGUS_NODE_separate_xyz", "YUGUS_NODE_vector_math", "YUGUS_NODE_mixer"]
+  },
+  {
+    "id": "nodes/flow-control",
+    "title": "Flow Control",
+    "description": "Decide when a graph branch runs, where its update events go, and when it continues. This page follows the FlowControl frame in the screenshot.",
+    "summary": "Schedule, route, delay, and coordinate update events.",
+    "image": "../assets/images/nodes-math-flow.png",
+    "imageAlt": "Yugo Math, Mixer, and FlowControl frames, including event routing nodes",
+    "note": "Update Event sockets carry scheduled events. Trigger sockets such as Condition and Open carry a value used as a condition.",
+    "nodeIds": ["YUGUS_NODE_hz_trigger", "YUGUS_NODE_flow_if", "YUGUS_NODE_flow_gate", "YUGUS_NODE_flow_delay", "YUGUS_NODE_flow_wait_until", "YUGUS_NODE_flow_once", "YUGUS_NODE_flow_sequence", "YUGUS_NODE_flow_every_n", "YUGUS_NODE_flow_repeat"]
+  },
+  {
+    "id": "nodes/motion-operation",
+    "title": "Motion Operation",
+    "description": "Adjust humanoid motion before converting it to transforms for your character. Use masks, weights, smoothing, mirroring, and timing to shape the result.",
+    "summary": "Shape humanoid motion and convert it to bone transforms.",
+    "image": "../assets/images/nodes-motion-expression.png",
+    "imageAlt": "Yugo Motion Operation and Expression Operation frames in Blender",
+    "note": "The Mixer in this frame is the same [Mixer](math-mixer.html#mixer) used elsewhere, configured for Humanoid Motion or Bone Transforms.",
+    "nodeIds": ["YUGUS_NODE_head_profile", "YUGUS_NODE_humanoid_mask", "YUGUS_NODE_motion_weight", "YUGUS_NODE_motion_smooth", "YUGUS_NODE_motion_delay", "YUGUS_NODE_mirror_motion", "YUGUS_NODE_motion_to_rotation"]
+  },
+  {
+    "id": "nodes/expression-operation",
+    "title": "Expression Operation",
+    "description": "Create and adjust expression channels, then convert them into shape-key values for your character. Channel names and the character expression map connect these operations to the intended facial controls.",
+    "summary": "Control expression channels and convert them to shape-key values.",
+    "image": "../assets/images/nodes-motion-expression.png",
+    "imageAlt": "Yugo Motion Operation and Expression Operation frames, including facial expression nodes",
+    "note": "The Mixer in this frame is [Mixer](math-mixer.html#mixer) configured for Expressions. Its Replace, Add, and Maximum modes combine expression streams in different ways.",
+    "nodeIds": ["YUGUS_NODE_expression_action", "YUGUS_NODE_expression_mask", "YUGUS_NODE_expression_smooth", "YUGUS_NODE_expression_lock", "YUGUS_NODE_expression_weight", "YUGUS_NODE_expression_to_shapes"]
+  },
+  {
+    "id": "nodes/outputs",
+    "title": "Outputs",
+    "description": "Apply evaluated data to Blender objects, bones, and shape keys. Each output needs both its data connections and an update event at Enter.",
+    "summary": "Apply object transforms, bone transforms, and shape-key values.",
+    "image": "../assets/images/nodes-outputs.png",
+    "imageAlt": "Yugo Outputs frame with Apply Transform, Bone Transforms to Armature, and ShapeKeysValues to Objects List",
+    "note": "For a regular update rate, connect [Hz Trigger](flow-control.html#hz-trigger). For simulated transforms, the [YugoPhysics Solver](physics.html#yugophysics-solver) Updated event can drive the output when simulation data advances.",
+    "nodeIds": ["YUGUS_NODE_apply_object_transform", "YUGUS_NODE_apply_rotation", "YUGUS_NODE_apply_shapes"]
+  },
+  {
+    "id": "nodes/physics",
+    "title": "Physics",
+    "description": "Build physics descriptions from VRM springs and rigid objects, then run them through the shared YugoPhysics solver.",
+    "summary": "Convert spring and rigid-object data into a shared simulation.",
+    "image": "../assets/images/nodes-physics.png",
+    "imageAlt": "Yugo Physics frame with spring conversion, rigid body conversion, and YugoPhysics Solver",
+    "nodeIds": ["YUGUS_NODE_spring_to_physics", "YUGUS_NODE_rigid_to_physics", "YUGUS_NODE_physics_solver"]
+  }
+]

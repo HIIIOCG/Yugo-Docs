@@ -1,0 +1,134 @@
+[
+  {
+    "id": "nodes/inputs",
+    "title": "Inputs",
+    "section": "Node Reference",
+    "category": "Inputs",
+    "isCategory": true,
+    "file": "content/nodes/inputs.md",
+    "nodeIds": [
+      "YUGUS_NODE_vmc_source",
+      "YUGUS_NODE_ifacial_source",
+      "YUGUS_NODE_action_source",
+      "YUGUS_NODE_vrm_data",
+      "YUGUS_NODE_data_viewer"
+    ]
+  },
+  {
+    "id": "nodes/custom-inputs",
+    "title": "Custom Inputs",
+    "section": "Node Reference",
+    "category": "Custom Inputs",
+    "isCategory": true,
+    "file": "content/nodes/custom-inputs.md",
+    "nodeIds": [
+      "YUGUS_NODE_float_value",
+      "YUGUS_NODE_vector_value",
+      "YUGUS_NODE_string_value",
+      "YUGUS_NODE_armature_value",
+      "YUGUS_NODE_object_value",
+      "YUGUS_NODE_objects_value",
+      "YUGUS_NODE_collection_value",
+      "YUGUS_NODE_image_value",
+      "YUGUS_NODE_image_from_url",
+      "YUGUS_NODE_bone_map_value",
+      "YUGUS_NODE_expression_map_value",
+      "YUGUS_NODE_meta_value"
+    ]
+  },
+  {
+    "id": "nodes/math-mixer",
+    "title": "Math / Mixer",
+    "section": "Node Reference",
+    "category": "Math / Mixer",
+    "isCategory": true,
+    "file": "content/nodes/math-mixer.md",
+    "nodeIds": [
+      "YUGUS_NODE_math",
+      "YUGUS_NODE_clamp",
+      "YUGUS_NODE_map_range",
+      "YUGUS_NODE_combine_xyz",
+      "YUGUS_NODE_separate_xyz",
+      "YUGUS_NODE_vector_math",
+      "YUGUS_NODE_mixer"
+    ]
+  },
+  {
+    "id": "nodes/flow-control",
+    "title": "Flow Control",
+    "section": "Node Reference",
+    "category": "Flow Control",
+    "isCategory": true,
+    "file": "content/nodes/flow-control.md",
+    "nodeIds": [
+      "YUGUS_NODE_hz_trigger",
+      "YUGUS_NODE_flow_if",
+      "YUGUS_NODE_flow_gate",
+      "YUGUS_NODE_flow_delay",
+      "YUGUS_NODE_flow_wait_until",
+      "YUGUS_NODE_flow_once",
+      "YUGUS_NODE_flow_sequence",
+      "YUGUS_NODE_flow_every_n",
+      "YUGUS_NODE_flow_repeat"
+    ]
+  },
+  {
+    "id": "nodes/motion-operation",
+    "title": "Motion Operation",
+    "section": "Node Reference",
+    "category": "Motion Operation",
+    "isCategory": true,
+    "file": "content/nodes/motion-operation.md",
+    "nodeIds": [
+      "YUGUS_NODE_head_profile",
+      "YUGUS_NODE_humanoid_mask",
+      "YUGUS_NODE_motion_weight",
+      "YUGUS_NODE_motion_smooth",
+      "YUGUS_NODE_motion_delay",
+      "YUGUS_NODE_mirror_motion",
+      "YUGUS_NODE_motion_to_rotation"
+    ]
+  },
+  {
+    "id": "nodes/expression-operation",
+    "title": "Expression Operation",
+    "section": "Node Reference",
+    "category": "Expression Operation",
+    "isCategory": true,
+    "file": "content/nodes/expression-operation.md",
+    "nodeIds": [
+      "YUGUS_NODE_expression_action",
+      "YUGUS_NODE_expression_mask",
+      "YUGUS_NODE_expression_smooth",
+      "YUGUS_NODE_expression_lock",
+      "YUGUS_NODE_expression_weight",
+      "YUGUS_NODE_expression_to_shapes"
+    ]
+  },
+  {
+    "id": "nodes/outputs",
+    "title": "Outputs",
+    "section": "Node Reference",
+    "category": "Outputs",
+    "isCategory": true,
+    "file": "content/nodes/outputs.md",
+    "nodeIds": [
+      "YUGUS_NODE_apply_object_transform",
+      "YUGUS_NODE_apply_rotation",
+      "YUGUS_NODE_apply_shapes"
+    ]
+  },
+  {
+    "id": "nodes/physics",
+    "title": "Physics",
+    "section": "Node Reference",
+    "category": "Physics",
+    "isCategory": true,
+    "file": "content/nodes/physics.md",
+    "nodeIds": [
+      "YUGUS_NODE_spring_to_physics",
+      "YUGUS_NODE_rigid_to_physics",
+      "YUGUS_NODE_physics_solver"
+    ]
+  }
+]
