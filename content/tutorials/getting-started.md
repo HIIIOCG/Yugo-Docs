@@ -20,6 +20,17 @@ Install Yugo, open its editor, and prepare your character. You can connect live 
 > For older separate installations
 > Yugo already includes Yugo Node. Keep **Yugo** enabled. If Blender also lists an older add-on named **Yugo Node** or **Yugu Node Studio** that you installed separately, disable that older entry. First-time users can skip this step.
 
+## Update an older Yugo installation
+
+If Blender still shows **Yugo 0.1.14** or another **0.1.x** version after installing, check the enabled entry before looking for the node editor.
+
+1. Save your scene. In **Edit → Preferences → Add-ons**, expand **Yugo** to check its version, then disable the older Yugo entry.
+2. Download [yugo-0.2.2.zip](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.2/yugo-0.2.2.zip). Use **Get Extensions → Install from Disk** to select this exact ZIP.
+3. Choose the same extension repository as the existing Yugo installation to update it there. If a separate entry appears instead, enable the **Yugo 0.2.2** entry and leave the older one disabled.
+4. Restart Blender. Expand the enabled **Yugo** entry in **Preferences → Add-ons** and verify that its version is **0.2.2**. In the **3D Viewport**, press **N → Yugo** and click **Open Yugo Node Editor**. The node editor is included in Yugo.
+
+An old version does not by itself mean you have a legacy add-on or a duplicate installation. If the enabled entry still shows **0.1.14**, [report the problem](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/issues) with your full Blender version, the enabled add-on's name and version, and any installation error.
+
 ## Prepare your character and graph
 
 1. Import your VRM character and save a working copy of the scene.
@@ -62,7 +73,18 @@ Save the scene after checking the result. Click **Pause Outputs** before saving 
 
 ## Optional physics add-on
 
-The main Yugo ZIP covers the steps on this page. For ProtoMotions experiments, install [Yugo PhysX Tracker 0.4.0](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.1/yugo_physx_tracker-0.4.0.zip) as a separate add-on alongside Yugo. Follow its bundled README for its skeleton and physics setup.
+For ProtoMotions experiments, install **Yugo PhysX Tracker 0.4.0** alongside Yugo. Its demo supplies its own SMPL skeleton and walking motion; you can try it without importing your own VRM or connecting a tracking app.
+
+1. Install and enable **Yugo 0.2.2** first, using the steps above.
+2. Download [yugo_physx_tracker-0.4.0.zip](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.2/yugo_physx_tracker-0.4.0.zip). Install it through **Get Extensions → Install from Disk**, then enable **Yugo PhysX Tracker**.
+3. In the **3D Viewport**, press **N → Yugo → Open Yugo Node Editor**. This opens a graph, including an initial example if none exists yet.
+4. In the node editor, choose **Add → PhysX Physics → Create PhysX Tracker Demo**. If you are editing a mesh or armature, return to **Object Mode** first.
+5. The demo adds its own source skeleton and four connected nodes to the current graph. Setup is complete and the walking example is selected, but playback is paused. Find the **PhysX Physics** node and click **Play** to start it.
+6. The button changes to **Pause**; click it to pause the simulation. Look at the skeleton in a **3D Viewport** to see the result.
+
+Installing PhysX does not automatically create a demo or start playback. Its controls are in the Yugo node editor's **PhysX Physics** menu and nodes. If that menu is missing, check that **Yugo** is enabled first and that **Yugo PhysX Tracker** enabled without an error. This demo uses its own **Play / Pause** control; **Start Outputs** above starts the character-tracking graph.
+
+For custom skeletons, live reference motion, and collision settings, follow the PhysX add-on's bundled README. Yugo 0.2.2 already includes the Yugo Node mentioned in that README.
 
 ## Next steps
 
