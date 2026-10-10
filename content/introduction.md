@@ -36,7 +36,9 @@ Yugo Node exposes the building blocks directly. A graph connects data sources, t
 
 ## Current package
 
-This handbook covers **Yugo 0.2.2** for **Windows x64** and **Blender 5.1 / 5.2**. Yugo Node is included in the Yugo ZIP; it does not need a separate installation. Download **yugo-0.2.2.zip** from the [latest official release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and follow [Getting Started](tutorials/getting-started.html). The included Node editor uses version **0.10.0**; the version shown on this website refers to the main Yugo package.
+This handbook covers **Yugo 0.2.3** for **Windows x64**, **Linux x64**, and **macOS Apple Silicon** with **Blender 5.1 / 5.2**. Download [yugo-0.2.3.zip](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.3/yugo-0.2.3.zip) from the [official Yugo 0.2.3 release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/tag/v0.2.3) and follow [Getting Started](tutorials/getting-started.html).
+
+Yugo Node is included in the main Yugo ZIP; it does not need a separate installation. The included Node editor uses version **0.10.0**; the version shown on this website refers to the main Yugo package. **Intel Macs need a separately qualified Yugo package for Blender 4.5**; that package has not been qualified. The separate **Yugo PhysX Tracker 0.4.0** add-on remains **Windows x64 only**.
 
 Some sections are marked **Page Work in Progress** while screenshots and instructions are prepared. These pages remain visible so you can see where future documentation will live.
 
