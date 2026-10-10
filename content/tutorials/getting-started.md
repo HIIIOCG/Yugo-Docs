@@ -1,63 +1,68 @@
-Install Yugo, prepare a VRM character, and connect a live motion source to a character output.
+Install Yugo, open its editor, and prepare your character. You can connect live tracking after the first setup.
+
+> Start here after installation
+> In the **3D Viewport**, press **N**, select **Yugo**, and click **Open Yugo Node Editor** at the top of the panel. In the editor, press **N → Yugo** to find **Fast Started**, **Help**, and the output controls.
 
 ## What you need
 
-- **Windows x64 and Blender 5.1 or 5.2.** Yugo's bundled native physics runtime targets these versions.
-- **Yugo 0.2.x.** This unified extension includes Yugo Node 0.10.0 and the original Yugo tools.
+- **Windows x64 and Blender 5.1 or 5.2.**
+- **Yugo 0.2.2.** Yugo Node and the other Yugo tools are included in one ZIP.
 - **A VRM character.** Use [VRM Add-on for Blender](https://vrm-addon-for-blender.info/en-us/) to import it with its humanoid mapping and expression data.
-- **A VMC sender for the live example below.** You can prepare the graph before connecting a sender. Blender Action is another motion source for an existing animation.
+- **Optional: a tracking app.** This example supports VMC body tracking and VMC or iFacialMocap face tracking. VMC is a way for tracking apps to send motion to Blender. You can prepare the character setup before connecting an app.
 
-## Install the unified package
+## Install Yugo
 
-1. Open the [latest official Yugo release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and download the **yugo-0.2.x.zip** asset matching that release.
-2. Disable separately installed **Yugo Node** or **Yugu Node Studio** before enabling unified Yugo. They use the same graph identifiers.
-3. In Blender, open **Edit → Preferences → Get Extensions**, then open its menu and choose **Install from Disk**.
-4. Select the Yugo ZIP and enable **Yugo**. Install and enable the VRM add-on if your character is not already imported.
-5. In the 3D Viewport, press **N** and open the **Yugo** tab. The original controls and the **Yugo Node** graph launcher share this tab.
+1. Open the [latest official Yugo release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and download **yugo-0.2.2.zip**.
+2. In Blender, open **Edit → Preferences → Get Extensions**, then open its menu and choose **Install from Disk**.
+3. Select the Yugo ZIP and enable **Yugo**.
+4. Install and enable the VRM add-on if your character is not already imported.
 
-The main Yugo package provides the workflow used here. **Yugo PhysX Tracker 0.4.0 / ProtoMotions** is an optional, independent ZIP available with the official release assets. It requires Yugo; installing the Tracker alone does not provide the main graph editor. Follow its bundled README for its own skeleton and physics workflow.
+> For older separate installations
+> Yugo already includes Yugo Node. Keep **Yugo** enabled. If Blender also lists an older add-on named **Yugo Node** or **Yugu Node Studio** that you installed separately, disable that older entry. First-time users can skip this step.
 
 ## Prepare your character and graph
 
 1. Import your VRM character and save a working copy of the scene.
-2. In **Yugo → Avatar List**, press **+** and choose the imported **VRM Armature**. This list is used by the original Yugo controls and the shared compositing tools.
-3. Expand the **Yugo Node** panel. Use the graph selector's new button to create a graph, then press **Open Node Editor**.
-4. The new graph includes **VRM Data**, **Blender Action**, motion and expression outputs, and an **Hz Trigger**. Turn off **Enabled** on the output nodes while preparing the connections.
-5. In **VRM Data**, choose the imported armature in its **Armature** input, then use **Reload**. The node should report **Ready**. Its Bone Map, Expression Map, Armatures, and Objects outputs describe this character.
+2. In the **3D Viewport**, press **N → Yugo**, then click the top **Open Yugo Node Editor** button. This area changes into the node editor.
+3. In the node editor, press **N → Yugo → Fast Started**.
+4. Choose your imported armature under **Character**. Leave **Body Motion** as **VMC** for body tracking. For **Face Capture**, choose **None**, **VMC**, or **iFacialMocap** to match your tracking app. At least one face or body source must be selected.
+5. Press **OK**. Yugo creates a new connected graph for this character and opens it. Existing graphs remain available in the node editor header's graph selector.
 
-The Avatar List and VRM Data selection serve different controls. Selecting an avatar in the sidebar does not replace the graph's explicit character selection.
+The new setup starts with **Outputs paused** and its tracking receivers disconnected. Fast Started selects the character and connects its motion and expression outputs for you; adding a separate Avatar List entry is not required for this node workflow.
+
+Use **Help** in the Yugo sidebar to open the [official handbook](https://hiiiodigital.com/Yugo-Docs/) in your browser. If you open the editor before using Fast Started, its first example uses Blender Action; you can still use Fast Started from the editor sidebar to create the tracking setup.
 
 ## Connect live body motion
 
-Use **Add → Inputs → VMC Receiver**. Replace the starter graph's Blender Action motion connection with VMC Receiver's **Humanoid Motion** output, and check the following connections:
+The Fast Started graph already contains the connections for your chosen sources. To start tracking:
 
-| From | To |
-| --- | --- |
-| VMC Receiver → Humanoid Motion | Motion to Bone Transform → Motion |
-| VRM Data → Bone Map | Motion to Bone Transform → Bone Map |
-| Motion to Bone Transform → Bone Transform | Bone Transforms to Armature → Bone Transform |
-| VRM Data → Armatures | Bone Transforms to Armature → Armatures |
-| Hz Trigger → Trigger | Bone Transforms to Armature → Enter |
+1. Set the receiver details in the graph. For **VMC Receiver**, match **Address** and **Port** to your setup. The default is **127.0.0.1:39539** for an app on the same computer. If the app runs on another device, use the Blender computer's network address in the receiver and send the app's VMC output to that address and port.
+2. If you chose **iFacialMocap**, set **iPhone Address** to your phone's network address. Its default **Device Port** is **49983**.
+3. Find the node labelled **Connect receivers** and click its **Trigger** button.
+4. In the editor's **N → Yugo** sidebar, click **Start Outputs**. The status changes to **Outputs running**. When the tracking app sends motion, the character should follow it.
 
-Set the receiver's **Port** to match your VMC sender; its default is **39539**. Point the sender at the computer running Blender and use the receiver's **Connect** control. Then enable **Bone Transforms to Armature**. When the sender supplies motion, the character should follow it.
+The connection starts the receiver; Start Outputs starts the character updates. These are separate controls. If you selected facial tracking, the graph also has its expression connections. Facial movement requires expression bindings to the character's shape keys; the sidebar shows a warning when those targets are missing.
 
-Data connections describe what to apply; **Enter** events tell the output when to write it to Blender. Receiving VMC data by itself does not move the character. The connected Hz Trigger runs automatically; it has no separate Play button.
-
-For facial expressions, connect the receiver's **Expressions** to **Expressions to ShapeKeysValues**, connect **VRM Data → Expression Map** to that converter, then send its **Shape Keys Values** and **VRM Data → Objects** to **ShapeKeysValues to Objects List**. Connect **Hz Trigger → Trigger** to that output's **Enter** and enable it. See [Inputs](../nodes/inputs.html) and [Outputs](../nodes/outputs.html) for the individual node interfaces.
+For the individual receiver settings and connections, see [Inputs](../nodes/inputs.html) and [Outputs](../nodes/outputs.html).
 
 ## Pause and check the setup
 
-Turn off an output's **Enabled** checkbox to pause its writes. Use **Disconnect** on the VMC Receiver to stop its network connection. Pause the corresponding original Motion Layers before letting a node output drive the same character.
+Click **Pause Outputs** in **N → Yugo** to pause character updates. To stop the tracking connections too, click **Trigger** on the **Disconnect receivers** node. After editing the character's VRM mapping or expressions, click **Trigger** on **Reload character**.
 
 | If you see this | Check this first |
 | --- | --- |
-| The Yugo tab is missing | Yugo is enabled and you are looking at the 3D Viewport sidebar |
-| VRM Data is not Ready | The selected object is the imported VRM armature; reload after changing its mapping or data |
-| The receiver has no motion | Sender address and port match Blender's receiver, and Connect is active |
-| Data arrives but the character does not move | Bone Map and Armatures target this character; Hz Trigger reaches Enter; the output is Enabled |
-| The pose or expressions conflict | Another Motion Layer, Apply node, or controller is writing the same targets |
+| The Yugo tab is missing | Yugo is enabled and your pointer is over the 3D Viewport or Yugo Node editor when you press N |
+| Fast Started cannot create the setup | Choose an armature in the current scene and at least one tracking source; check its VRM humanoid mapping |
+| A warning says facial targets are missing | Add the character's VRM expression bindings, then use Reload character |
+| The receiver has no motion | Match the address and port to the tracking app, then click Trigger on Connect receivers |
+| Data arrives but the character does not move | Click Start Outputs; check that the character output nodes are Enabled |
+| The pose or expressions conflict | Pause other Motion Layers or controllers that are writing to the same character |
 
-Save the configured scene after checking the result. Connected Hz Trigger routes can resume their output updates when a scene opens; network sources still need their own connection controls. Disable outputs before saving when you want the file to reopen paused.
+Save the scene after checking the result. Click **Pause Outputs** before saving if you want it to reopen paused. Tracking receivers need their connection controls when you reopen the file.
+
+## Optional physics add-on
+
+The main Yugo ZIP covers the steps on this page. For ProtoMotions experiments, install [Yugo PhysX Tracker 0.4.0](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.1/yugo_physx_tracker-0.4.0.zip) as a separate add-on alongside Yugo. Follow its bundled README for its skeleton and physics setup.
 
 ## Next steps
 
