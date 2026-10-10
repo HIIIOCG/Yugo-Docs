@@ -14,6 +14,9 @@ The same building blocks can support an avatar on stream, a character interactin
 - **Add physical interaction.** Convert VRM spring data and rigid objects into descriptions for the shared YugoPhysics solver.
 - **Apply VTuber-style looks.**
 
+> Start in Blender
+> Press **N** in the **3D Viewport**, open **Yugo**, and click **Open Yugo Node Editor** at the top. In the editor's **N → Yugo** sidebar, use **Fast Started** to prepare character tracking or **Help** to open this handbook.
+
 ## Find your way around
 
 | Goal | Guide |
@@ -33,7 +36,7 @@ Yugo Node exposes the building blocks directly. A graph connects data sources, t
 
 ## Current package
 
-This handbook covers **Yugo 0.2.x**, the unified package containing **Yugo Node 0.10.0** and the original Yugo tools. It targets **Windows x64** and **Blender 5.1 / 5.2**. Download it from the [latest official release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and follow [Getting Started](tutorials/getting-started.html). Read the notes supplied with the package you download; compatibility and available features can differ between releases.
+This handbook covers **Yugo 0.2.2** for **Windows x64** and **Blender 5.1 / 5.2**. Yugo Node is included in the Yugo ZIP; it does not need a separate installation. Download **yugo-0.2.2.zip** from the [latest official release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and follow [Getting Started](tutorials/getting-started.html). The included Node editor uses version **0.10.0**; the version shown on this website refers to the main Yugo package.
 
 Some sections are marked **Page Work in Progress** while screenshots and instructions are prepared. These pages remain visible so you can see where future documentation will live.
 
