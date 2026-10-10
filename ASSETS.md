@@ -40,8 +40,8 @@ The sidebar maker section uses the supplied hiiio wordmark from `D:/Projects/BCO
 | Priority | Asset | Destination |
 | --- | --- | --- |
 | High | Current Optimize dialog screenshot | VRM Character Performance |
-| High | Current Composing panel and Main FX screenshots with control labels | Composing Presets |
-| High | Confirm the settings used for the supplied `comp_preset_before.jpg` and `comp_preset.jpg` comparison | Composing Presets |
+| High | Current Compositing panel and Main FX screenshots with control labels | Compositing Presets |
+| High | Confirm the settings used for the supplied `comp_preset_before.jpg` and `comp_preset.jpg` comparison | Compositing Presets |
 | Medium | Complete verified node connection examples | Node Reference |
 | Later | Step-by-step Yugo Layer material to accompany the supplied `YugoLayouts.jpg` overview | Yugo Layer |
 | Later | Camera setup screenshots | Camera |

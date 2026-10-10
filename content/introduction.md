@@ -18,11 +18,11 @@ The same building blocks can support an avatar on stream, a character interactin
 
 | Goal | Guide |
 | --- | --- |
-| Get started | [Tutorials](tutorials/index.html) — WIP |
+| Get started | [Getting Started](tutorials/getting-started.html) |
 | Use layers | [Yugo Layer](yugo-layer.html) — WIP |
 | Explore nodes | [Node Reference](nodes/index.html) |
 | Improve performance | [VRM Performance](optimizing-vrm-character-performance.html) |
-| Style your character | [Composing Presets](composing-presets.html) |
+| Style your character | [Compositing Presets](composing-presets.html) |
 | Set up a camera | [Camera](camera.html) — WIP |
 
 ## Layers and nodes
@@ -33,12 +33,13 @@ Yugo Node exposes the building blocks directly. A graph connects data sources, t
 
 ## Current package
 
-This first edition documents **Yugo Node 0.10.0**. The package targets **Windows x64** and **Blender 5.1 or newer**. Read the installation and release notes supplied with the package you download; compatibility and available features can differ between releases.
+This handbook covers **Yugo 0.2.x**, the unified package containing **Yugo Node 0.10.0** and the original Yugo tools. It targets **Windows x64** and **Blender 5.1 / 5.2**. Download it from the [latest official release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and follow [Getting Started](tutorials/getting-started.html). Read the notes supplied with the package you download; compatibility and available features can differ between releases.
 
 Some sections are marked **Page Work in Progress** while screenshots and instructions are prepared. These pages remain visible so you can see where future documentation will live.
 
 ## Project links
 
-- [Yugo development repository](https://github.com/HIIIOCG/Yugo-BlenderVtubing-Dev)
-- [Report a problem](https://github.com/HIIIOCG/Yugo-BlenderVtubing-Dev/issues)
+- [Yugo source repository](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools)
+- [Latest release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest)
+- [Report a problem](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/issues)
 - [Improve this handbook](https://github.com/HIIIOCG/Yugo-Docs)

@@ -4,11 +4,11 @@ Keep your VRM character responsive while preserving the parts of its appearance 
 
 Full MToon materials can be demanding in Blender. **MToon Optimize** replaces them with a lighter, simplified version that keeps the essential features. Supported settings remain connected to the original MToon interface, so you can keep using its familiar controls.
 
-Yugo then brings back selected visual effects through post-processing with [Composing Presets](composing-presets.html). The idea is to keep the material lightweight and handle more of the final look in the compositor.
+Yugo then brings back selected visual effects through post-processing with [Compositing Presets](composing-presets.html). The idea is to keep the material lightweight and handle more of the final look in the compositor.
 
 ## Use Yugo's Optimize tools
 
-In Object Mode, select the character's mesh objects. Open the **Yugo Node** sidebar in the 3D Viewport and choose **Optimize**. The same panel is available in the Yugo Node editor.
+In Object Mode, select the character's mesh objects. Open the **Yugo** sidebar tab in the 3D Viewport and choose **Optimize**. The same panel is available in the Yugo Node editor.
 
 The dialog reports **Selected Objects** and **MToon Materials**. Check these counts before applying changes: the operator works on selected objects rather than automatically processing every character in the scene.
 
@@ -18,7 +18,7 @@ The dialog reports **Selected Objects** and **MToon Materials**. Check these cou
 | Shadow Mix | Controls shadow-color preprocessing during material optimization | The resulting shade color under your scene lighting |
 | Outline Apply | Bakes selected MToon outlines into meshes and removes the source outline modifiers | Outline appearance and deformation during animation |
 
-**Shadow Mix** is applied during optimization. It is separate from the **Secondary Shadow** effect in the Composing preset.
+**Shadow Mix** is applied during optimization. It is separate from the **Secondary Shadow** effect in the compositing preset.
 
 **Outline Apply** changes the scene's mesh setup. Keep the source copy and inspect the result while the character moves. Do not assume that baking an outline always improves performance: the result depends on the character and scene.
 
@@ -41,7 +41,7 @@ These are troubleshooting clues, not proof of a single bottleneck.
 
 ## Further reading
 
-- [Composing Presets](composing-presets.html)
+- [Compositing Presets](composing-presets.html)
 - [Physics nodes](nodes/physics.html)
 - [Blender EEVEE documentation](https://docs.blender.org/manual/en/5.2/render/eevee/index.html)
 - [VRM Add-on MToon materials](https://vrm-addon-for-blender.info/en-us/material-mtoon/)
