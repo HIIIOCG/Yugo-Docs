@@ -5,14 +5,19 @@ Install Yugo, open its editor, and prepare your character. You can connect live 
 
 ## What you need
 
-- **Windows x64 and Blender 5.1 or 5.2.**
-- **Yugo 0.2.2.** Yugo Node and the other Yugo tools are included in one ZIP.
+- **Windows x64, Linux x64, or macOS with Apple Silicon, and Blender 5.1 or 5.2.** These are the target platforms for Yugo 0.2.3.
+- **Yugo 0.2.3.** Yugo Node and the other Yugo tools are included in one ZIP.
 - **A VRM character.** Use [VRM Add-on for Blender](https://vrm-addon-for-blender.info/en-us/) to import it with its humanoid mapping and expression data.
 - **Optional: a tracking app.** This example supports VMC body tracking and VMC or iFacialMocap face tracking. VMC is a way for tracking apps to send motion to Blender. You can prepare the character setup before connecting an app.
 
+> Release preparation
+> This guide is being prepared for the **Yugo 0.2.3 candidate**. Native platform testing and release publication are still pending. The latest official release may still be 0.2.2; follow the installation steps below once 0.2.3 is published.
+
+**Intel Macs need a separately qualified Yugo package for Blender 4.5.** That route has not been qualified and is outside this guide's supported platforms. The optional PhysX add-on below remains **Windows x64 only**.
+
 ## Install Yugo
 
-1. Open the [latest official Yugo release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and download **yugo-0.2.2.zip**.
+1. Once 0.2.3 is published, open the [latest official Yugo release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest) and download **yugo-0.2.3.zip**. The same ZIP is used for all three main Yugo platforms.
 2. In Blender, open **Edit → Preferences → Get Extensions**, then open its menu and choose **Install from Disk**.
 3. Select the Yugo ZIP and enable **Yugo**.
 4. Install and enable the VRM add-on if your character is not already imported.
@@ -25,9 +30,9 @@ Install Yugo, open its editor, and prepare your character. You can connect live 
 If Blender still shows **Yugo 0.1.14** or another **0.1.x** version after installing, check the enabled entry before looking for the node editor.
 
 1. Save your scene. In **Edit → Preferences → Add-ons**, expand **Yugo** to check its version, then disable the older Yugo entry.
-2. Download [yugo-0.2.2.zip](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.2/yugo-0.2.2.zip). Use **Get Extensions → Install from Disk** to select this exact ZIP.
-3. Choose the same extension repository as the existing Yugo installation to update it there. If a separate entry appears instead, enable the **Yugo 0.2.2** entry and leave the older one disabled.
-4. Restart Blender. Expand the enabled **Yugo** entry in **Preferences → Add-ons** and verify that its version is **0.2.2**. In the **3D Viewport**, press **N → Yugo** and click **Open Yugo Node Editor**. The node editor is included in Yugo.
+2. Once 0.2.3 is published, download **yugo-0.2.3.zip** from the [official release](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/latest). Use **Get Extensions → Install from Disk** to select this exact ZIP.
+3. Choose the same extension repository as the existing Yugo installation to update it there. If a separate entry appears instead, enable the **Yugo 0.2.3** entry and leave the older one disabled.
+4. Restart Blender. Expand the enabled **Yugo** entry in **Preferences → Add-ons** and verify that its version is **0.2.3**. In the **3D Viewport**, press **N → Yugo** and click **Open Yugo Node Editor**. The node editor is included in Yugo.
 
 An old version does not by itself mean you have a legacy add-on or a duplicate installation. If the enabled entry still shows **0.1.14**, [report the problem](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/issues) with your full Blender version, the enabled add-on's name and version, and any installation error.
 
@@ -73,9 +78,9 @@ Save the scene after checking the result. Click **Pause Outputs** before saving 
 
 ## Optional physics add-on
 
-For ProtoMotions experiments, install **Yugo PhysX Tracker 0.4.0** alongside Yugo. Its demo supplies its own SMPL skeleton and walking motion; you can try it without importing your own VRM or connecting a tracking app.
+On **Windows x64 only**, you can install **Yugo PhysX Tracker 0.4.0** alongside Yugo for ProtoMotions experiments. It is a separate add-on: the main Yugo platform list above does not extend PhysX support to Linux or macOS. Its demo supplies its own SMPL skeleton and walking motion; you can try it without importing your own VRM or connecting a tracking app.
 
-1. Install and enable **Yugo 0.2.2** first, using the steps above.
+1. Install and enable the main **Yugo** add-on first. Use **Yugo 0.2.3** after its release, or the already published **0.2.2** on Windows.
 2. Download [yugo_physx_tracker-0.4.0.zip](https://github.com/HIIIOCG/Yugo-BlenderVtubingTools/releases/download/v0.2.2/yugo_physx_tracker-0.4.0.zip). Install it through **Get Extensions → Install from Disk**, then enable **Yugo PhysX Tracker**.
 3. In the **3D Viewport**, press **N → Yugo → Open Yugo Node Editor**. This opens a graph, including an initial example if none exists yet.
 4. In the node editor, choose **Add → PhysX Physics → Create PhysX Tracker Demo**. If you are editing a mesh or armature, return to **Object Mode** first.
@@ -84,7 +89,7 @@ For ProtoMotions experiments, install **Yugo PhysX Tracker 0.4.0** alongside Yug
 
 Installing PhysX does not automatically create a demo or start playback. Its controls are in the Yugo node editor's **PhysX Physics** menu and nodes. If that menu is missing, check that **Yugo** is enabled first and that **Yugo PhysX Tracker** enabled without an error. This demo uses its own **Play / Pause** control; **Start Outputs** above starts the character-tracking graph.
 
-For custom skeletons, live reference motion, and collision settings, follow the PhysX add-on's bundled README. Yugo 0.2.2 already includes the Yugo Node mentioned in that README.
+For custom skeletons, live reference motion, and collision settings, follow the PhysX add-on's bundled README. Yugo 0.2.x already includes the Yugo Node mentioned in that README.
 
 ## Next steps
 

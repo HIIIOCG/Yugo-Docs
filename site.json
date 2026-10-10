@@ -1,7 +1,7 @@
 {
   "title": "Yugo Handbook",
   "description": "Bring tracking, animation, expressions, and physics together in Blender.",
-  "version": "0.2.2",
+  "version": "0.2.3 candidate",
   "repository": "https://github.com/HIIIOCG/Yugo-Docs",
   "sourceRepository": "https://github.com/HIIIOCG/Yugo-BlenderVtubingTools",
   "pages": [
