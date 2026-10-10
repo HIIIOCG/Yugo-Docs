@@ -1,11 +1,14 @@
-Step-by-step workflows for building a Yugo setup in Blender.
+Step-by-step workflows for building a Yugo setup in Blender. Start with the unified package installation and live-motion setup.
 
 > Page Work in Progress
-> Tutorials will be added as tested examples, screenshots, and recordings become available.
+> More tutorials, screenshots, and recordings are being prepared. Getting Started is available now.
 
-## Planned tutorials
+## Available tutorial
 
 - [Getting Started](getting-started.html)
+
+## Coming next
+
 - [Your First Node Graph](first-node-graph.html)
 
 For individual node behavior, visit the [Node Reference](../nodes/index.html).

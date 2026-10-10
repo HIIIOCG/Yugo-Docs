@@ -36,5 +36,9 @@ const nodes=JSON.parse(fs.readFileSync(path.join(root,'../data/nodes.json'),'utf
 const grouped=pages.flatMap(p=>p.nodeIds||[]);
 if(new Set(grouped).size!==grouped.length)errors.push('A node appears in multiple groups');
 for(const node of nodes)if(!grouped.includes(node.id))errors.push('Ungrouped node '+node.title);
-for(const id of ['yugo-layer','camera','tutorials/index','tutorials/getting-started','tutorials/first-node-graph'])if(!fs.readFileSync(path.join(root,id+'.html'),'utf8').includes('Page Work in Progress'))errors.push('Missing WIP label '+id);
+for(const page of pages){
+  const html=fs.readFileSync(path.join(root,page.id+'.html'),'utf8');
+  const hasWip=html.includes('class="callout wip"');
+  if(hasWip!==(page.status==='wip'))errors.push('WIP marker does not match page status '+page.id);
+}
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`Checked ${files.length} HTML files, ${index.length} search entries, local links, image paths, anchors, and English/WIP markers.`);
