@@ -36,7 +36,7 @@ The static site is written to `dist/`. The checks verify local links, images, an
 
 Supported Markdown includes headings, paragraphs, links, images, bold text, inline code, ordered/unordered lists, tables, and callouts. Content is rendered to HTML at build time. Relative links work under a GitHub Pages repository subpath. Search uses a local index; no external search account is needed.
 
-Getting Started includes installation and a live-motion graph walkthrough. Yugo Layer, Camera, the tutorial index, and Your First Node Graph retain **Page Work in Progress** where their remaining material is still being prepared.
+Getting Started includes installation and a live-motion graph walkthrough. Showcase, Q&A, Yugo Layer, Camera, the tutorial index, and Your First Node Graph retain **Page Work in Progress** where their remaining material is still being prepared.
 
 ## Reading layout
 

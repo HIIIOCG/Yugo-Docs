@@ -6,6 +6,8 @@
   "sourceRepository": "https://github.com/HIIIOCG/Yugo-BlenderVtubingTools",
   "pages": [
     {"id":"index","title":"Introduction to Yugo","section":"Welcome","file":"content/introduction.md"},
+    {"id":"showcase","title":"Showcase","section":"Welcome","file":"content/showcase.md","status":"wip"},
+    {"id":"q-and-a","title":"Q&A","section":"Welcome","file":"content/q-and-a.md","status":"wip"},
     {"id":"tutorials/index","title":"Tutorials","section":"Tutorials","file":"content/tutorials/index.md","status":"wip"},
     {"id":"tutorials/getting-started","title":"Getting Started","section":"Tutorials","file":"content/tutorials/getting-started.md"},
     {"id":"tutorials/first-node-graph","title":"Your First Node Graph","section":"Tutorials","file":"content/tutorials/first-node-graph.md","status":"wip"},
